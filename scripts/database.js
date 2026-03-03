@@ -99,6 +99,11 @@ const database = {
         walkerId: 7
     }]
 }
+ /*
+export const getCities = () => {
+    return structuredClone(database.walkers);
+}
+*/
 
 export const getWalkers = () => {
     return structuredClone(database.walkers);
