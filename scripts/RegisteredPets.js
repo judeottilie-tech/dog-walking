@@ -1,34 +1,30 @@
-import { getPets, getWalkers } from "./database.js"
+import { getPets, getWalkers } from "./database.js";
 
-const pets = getPets()
-const walkers = getWalkers()
+const pets = getPets();
+const walkers = getWalkers();
 
-document.addEventListener(
-    "click",
-    (clickEvent) => {
-        const clickTarget = clickEvent.target
+document.addEventListener("click", (clickEvent) => {
+  const clickTarget = clickEvent.target;
 
-        if (clickTarget.dataset.type === "pet") {
-            const walkerId = clickTarget.dataset.walkerforeignkey
+  if (clickTarget.dataset.type === "pet") {
+    const walkerId = clickTarget.dataset.walkerforeignkey;
 
-            for (const walker of walkers) {
-                if (walker.id === parseInt(walkerId)) {
-                    window.alert(`This pet is being walked by ${walker.name}`)
-                }
-            }
-        }
+    for (const walker of walkers) {
+      if (walker.id === parseInt(walkerId)) {
+        window.alert(`This pet is being walked by ${walker.name}`);
+      }
     }
-)
+  }
+});
 
 export const registeredPets = () => {
-    let petHTML = "<ul>"
+  let petHTML = "<ul>";
 
-    for (const pet of pets) {
-       petHTML += `<li data-type="pet" data-walkerforeignkey="${pet.walkerId}">${pet.name}</li>`
-    }
+  for (const pet of pets) {
+    petHTML += `<li data-type="pet" data-walkerforeignkey="${pet.walkerId}">${pet.name}</li>`;
+  }
 
-    petHTML += "</ul>"
+  petHTML += "</ul>";
 
-    return petHTML
-}
-
+  return petHTML;
+};
