@@ -10,52 +10,91 @@ const database = {
         id: 1,
         name: "Alphonse Meron",
         email: "ameron0@mashable.com",
-        city: "Chicago"
+        cityId: "Chicago"
     }, {
         id: 2,
         name: "Damara Pentecust",
         email: "dpentecust1@apache.org",
-        city: "White Plains"
+        cityId: "White Plains"
     }, {
         id: 3,
         name: "Anna Bowton",
         email: "abowton2@wisc.edu",
-        city: "Sarasota"
+        cityId: "Sarasota"
     }, {
         id: 4,
         name: "Hunfredo Drynan",
         email: "hdrynan3@bizjournals.com",
-        city: "San Diego"
+        cityId: "San Diego"
     }, {
         id: 5,
         name: "Elmira Bick",
         email: "ebick4@biblegateway.com",
-        city: "Boise"
+        cityId: "Boise"
     }, {
         id: 6,
         name: "Bernie Dreger",
         email: "bdreger5@zimbio.com",
-        city: "Denver"
+        cityId: "Denver"
     }, {
         id: 7,
         name: "Rolando Gault",
         email: "rgault6@google.com",
-        city: "Tucson"
+        cityId: "Tucson"
     }, {
         id: 8,
         name: "Tiffanie Tubby",
         email: "ttubby7@intel.com",
-        city: "Phoenix"
+        cityId: "Phoenix"
     }, {
         id: 9,
         name: "Tomlin Cutill",
         email: "tcutill8@marketwatch.com",
-        city: "Minneapolis"
+        cityId: "Minneapolis"
     }, {
         id: 10,
         name: "Arv Biddle",
         email: "abiddle9@cafepress.com",
-        city: "Pittsburgh"
+        cityId: "Pittsburgh"
+    },{
+    id: 14,
+    name: "Amelia Anderson",
+    email: "amelia@andersonfam.com",
+    cityId: "San Diego"
+    }],
+    cities: [{
+        id: 1,
+        name: "Chicago"
+        }, {
+        id: 2,
+        name: "White Plains"
+        }, {
+        id: 3,
+        name: "Sarasota"
+        }, {
+        id: 4,
+        name: "San Diego"
+        }, {
+        id: 5,
+        name: "Boise"
+        }, {
+        id: 6,
+        name: "Denver"
+        }, {
+        id: 7,
+        name: "Tucson"
+        }, {
+        id: 8,
+        name: "Phoenix"
+        }, {
+        id: 9,
+        name: "Minneapolis"
+        }, {
+        id: 10,
+        name: "Pittsburgh"
+        },{
+        id: 14,
+        name: "San Diego"
     }],
     pets: [{
         id: 1,
@@ -99,14 +138,13 @@ const database = {
         walkerId: 7
     }]
 }
- /*
-export const getCities = () => {
-    return structuredClone(database.walkers);
-}
-*/
 
 export const getWalkers = () => {
     return structuredClone(database.walkers);
+}
+
+export const getCities = () => {
+    return structuredClone(database.cities)
 }
 
 export const getPets = () => {

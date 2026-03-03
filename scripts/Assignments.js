@@ -24,12 +24,11 @@ export const Assignments = () => {
 
     for (const currentPet of pets) {
         const currentPetWalker = findWalker(currentPet, walkers)
-        assignmentHTML += `
-            <li>
-                ${currentPet.name} is being walked by
-                ${currentPetWalker.name} in ${currentPetWalker.city}
-            </li>
-        `
+            if (currentPetWalker) {
+            assignmentHTML += `<li>${currentPet.name} is being walked by ${currentPetWalker.name} in ${currentPetWalker.cityId}</li>`
+            } else {
+            assignmentHTML += `<li>${currentPet.name} has no walker assigned</li>`
+}
     }
 
     assignmentHTML += "</ul>"

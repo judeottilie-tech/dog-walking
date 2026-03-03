@@ -14,11 +14,13 @@ document.addEventListener(
     }
 )
 
+
+
 export const CityList = () => {
     let citiesHTML = "<ol>"
 
     for (const walker of walkers) {
-        citiesHTML += `<li data-type="city" data-walkername="${walker.name}">${walker.city}</li>`
+        citiesHTML += `<li data-type="city" data-walkername="${walker.name}">${walker.cityId}</li>`
     }
 
     citiesHTML += "</ol>"
