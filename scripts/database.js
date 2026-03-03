@@ -143,10 +143,6 @@ export const getWalkers = () => {
     return structuredClone(database.walkers);
 }
 
-export const getCities = () => {
-    return structuredClone(database.cities)
-}
-
 export const getPets = () => {
     return structuredClone(database.pets);
 }
